@@ -41,6 +41,9 @@ const playPausebutton = document.getElementById('playPauseButton');
 
 
 text.addEventListener('click', function() {
+    text.style.opacity = '0';
+    creditsBtn.style.opacity = '0';
+
     videoContainer.style.display = 'flex'; // Show video container
     videoContainer.style.flexDirection = 'column';
     videoContainer.style.opacity = '1'; // Fade in video
@@ -51,15 +54,16 @@ text.addEventListener('click', function() {
         video.play();
     }, 1000);
 
-        text.classList.add('hidden'); // Fade out text
-        creditsBtn.classList.add('hidden');
+        // text.classList.add('hidden'); // Fade out text
+        // creditsBtn.classList.add('hidden');
 });
 
 closeButton.addEventListener('click', function() {
-    video.src = ''; // Stop the video
-    videoContainer.style.opacity = '0'; // Fade out video
+    video.style.opacity = '0';
+    closeButton.style.opacity = '0';
 
     setTimeout(() => {
+        video.src = '';
         videoContainer.style.display = 'none'; // Hide video container after fade out
 
         text.classList.remove('hidden'); // Fade text back in
@@ -106,13 +110,17 @@ creditsBtn.addEventListener('click', function() {
 });
 
 closeCredits.addEventListener('click', function() {
-    credits.src = '';
-    creditsContainer.style.opacity = '0';
+    credits.style.opacity = '0';
+    closeCredits.style.opacity = '0';
 
     setTimeout(() => {
         creditsContainer.style.display = 'none';
+
         text.classList.remove('hidden');
         creditsBtn.classList.remove('hidden');
+
+        text.style.opacity = '1';
+        creditsBtn.style.opacity = '1';
     },1000);
 });
 
