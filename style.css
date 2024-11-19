@@ -3,3 +3,19 @@
   padding: 0;
   margin: 0;
 }
+
+#videoContainer {
+  display: none;
+  margin-top: 20px;
+}
+
+#video {
+  width: 560px;
+  height: 315px;
+}
+
+.clickable-text {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
