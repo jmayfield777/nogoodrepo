@@ -54,8 +54,14 @@ text.addEventListener('click', function() {
         video.play();
     }, 1000);
 
-        // text.classList.add('hidden'); // Fade out text
-        // creditsBtn.classList.add('hidden');
+    setTimeout(() => {
+        closeButton.style.opacity = '1';
+    }, 1000);
+
+    setTimeout(() => {
+        text.classList.add('hidden');
+        creditsBtn.classList.add('hidden');
+    }, 1000);
 });
 
 closeButton.addEventListener('click', function() {
@@ -66,27 +72,18 @@ closeButton.addEventListener('click', function() {
         video.src = '';
         videoContainer.style.display = 'none'; // Hide video container after fade out
 
-        text.classList.remove('hidden'); // Fade text back in
-        creditsBtn.classList.remove('hidden');
-
         text.style.opacity = '1';
         creditsBtn.style.opacity = '1';
-}, 1000); // Wait for the fade out transition to finish
+
+        text.classList.remove('hidden'); // Fade text back in
+        creditsBtn.classList.remove('hidden');
+    }, 1000); // Wait for the fade out transition to finish
 });
 
-// creditsBtn.addEventListener('click', function() {
-//     creditsContainer.style.display = 'flex';
-//     creditsContainer.style.opacity = '1';
-
-//     setTimeout(() => {
-//         credits.style.opacity = '1';
-//         credits.src = creditSource;
-//     }, 1000);
-//     text.classList.add('hidden');
-//     creditsBtn.classList.add('hidden');
-// });
-
 creditsBtn.addEventListener('click', function() {
+    text.style.opacity = '0';
+    creditsBtn.style.opacity = '0';
+
     loadingContainer.style.display = 'flex';
     credits.style.display = 'none';
 
@@ -105,8 +102,14 @@ creditsBtn.addEventListener('click', function() {
         }, 1000);
     };
 
-    text.classList.add('hidden');
-    creditsBtn.classList.add('hidden');
+    setTimeout(() => {
+        closeCredits.style.opacity = '1';
+    }, 1000);
+
+    setTimeout(() => {
+        text.classList.add('hidden');
+        creditsBtn.classList.add('hidden');
+    });
 });
 
 closeCredits.addEventListener('click', function() {
