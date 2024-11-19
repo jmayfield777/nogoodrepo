@@ -136,3 +136,13 @@ h1 {
   opacity: 0;
   transition: opacity 1s ease;
 }
+
+/* #playPauseButton {
+  background: none;
+  border: none;
+  padding: 0;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+  transition: opacity 1s ease;
+} */

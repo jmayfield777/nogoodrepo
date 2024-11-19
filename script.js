@@ -37,15 +37,18 @@ const creditsContainer = document.getElementById('creditsContainer');
 const credits = document.getElementById('creditsImg');
 const creditSource = './Credits stills_5.1.1.webp';
 const closeCredits = document.getElementById('closeCreditsButton');
+const playPausebutton = document.getElementById('playPauseButton');
 
 
 text.addEventListener('click', function() {
     videoContainer.style.display = 'flex'; // Show video container
+    videoContainer.style.flexDirection = 'column';
     videoContainer.style.opacity = '1'; // Fade in video
 
     setTimeout(() => {
         video.style.opacity = '1'
         video.src = videoSource; // Start the video
+        video.play();
     }, 1000);
         text.classList.add('hidden'); // Fade out text
         creditsBtn.classList.add('hidden');
@@ -108,3 +111,13 @@ closeCredits.addEventListener('click', function() {
         creditsBtn.classList.remove('hidden');
     },1000);
 });
+
+// playPausebutton.addEventListener('click', () => {
+//     if (video.paused) {
+//         video.play();
+//         playPausebutton.textContent = 'Pause';
+//     } else {
+//         video.pause();
+//         playPausebutton.textContent = 'Play';
+//     }
+// });
