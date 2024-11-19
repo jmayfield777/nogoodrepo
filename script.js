@@ -116,12 +116,14 @@ closeCredits.addEventListener('click', function() {
     },1000);
 });
 
-// playPausebutton.addEventListener('click', () => {
-//     if (video.paused) {
-//         video.play();
-//         playPausebutton.textContent = 'Pause';
-//     } else {
-//         video.pause();
-//         playPausebutton.textContent = 'Play';
-//     }
-// });
+document.addEventListener('keydown', (event) => {
+    if (event.code === 'Space') {
+        event.preventDefault();
+
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    }
+});
