@@ -50,6 +50,7 @@ text.addEventListener('click', function() {
         video.src = videoSource; // Start the video
         video.play();
     }, 1000);
+
         text.classList.add('hidden'); // Fade out text
         creditsBtn.classList.add('hidden');
 });
@@ -60,8 +61,12 @@ closeButton.addEventListener('click', function() {
 
     setTimeout(() => {
         videoContainer.style.display = 'none'; // Hide video container after fade out
+
         text.classList.remove('hidden'); // Fade text back in
         creditsBtn.classList.remove('hidden');
+
+        text.style.opacity = '1';
+        creditsBtn.style.opacity = '1';
 }, 1000); // Wait for the fade out transition to finish
 });
 
@@ -82,7 +87,6 @@ creditsBtn.addEventListener('click', function() {
     credits.style.display = 'none';
 
     credits.style.opacity = '0';
-
     credits.src = creditSource;
 
     creditsContainer.style.display = 'flex';
