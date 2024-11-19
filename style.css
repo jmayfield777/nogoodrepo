@@ -56,7 +56,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-.center-container, .center-credits-container {
+.center-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,7 +67,14 @@ h1 {
   opacity: 0;
 }
 
+.center-credits-container {
+  position: relative;
+}
+
 #creditsBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
   padding: 10px 20px;
   font-size: 8px;
   cursor: pointer;
@@ -75,6 +82,7 @@ h1 {
   background: red;
   border: none;
   border-radius: 25px;
+  z-index: 1000;
 }
 
 #creditsContainer {
@@ -136,13 +144,3 @@ h1 {
   opacity: 0;
   transition: opacity 1s ease;
 }
-
-/* #playPauseButton {
-  background: none;
-  border: none;
-  padding: 0;
-  color: white;
-  font: inherit;
-  cursor: pointer;
-  transition: opacity 1s ease;
-} */
