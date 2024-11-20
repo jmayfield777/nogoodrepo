@@ -1,32 +1,3 @@
-// function showVideo() {
-//     const textEl = document.querySelector('.clickable-text');
-//     textEl.style.opacity = 0;
-
-//     setTimeout(() => {
-//         const videoContainer = document.getElementById('videoContainer');
-//         const video = document.getElementById('video');
-//         const videoSource = './NOGOODDREAM_WEB.mp4';
-
-//         video.src = videoSource;
-//         videoContainer.style.display = 'flex';
-
-//         setTimeout(() => {
-//             video.style.opacity = 1;
-//         }, 100);
-//     }, 1000);
-// }
-
-// function closeVideo(event) {
-//     const videoContainer = document.getElementById('videoContainer');
-//     const video = document.getElementById('video');
-//     const textEl = document.querySelector('.clickable-text');
-    
-//     video.src = '';
-//     videoContainer.style.display = 'none';
-
-//     if (event) event.stopPropagation();
-// }
-
 const videoContainer = document.getElementById('videoContainer');
 const video = document.getElementById('video');
 const text = document.querySelector('.clickable-text');
@@ -128,7 +99,7 @@ creditsBtn.addEventListener('click', function() {
             credits.style.opacity = '1';
             closeCredits.style.opacity = '1';
         }, 100);
-        
+
     }, 1000);
 });
 
