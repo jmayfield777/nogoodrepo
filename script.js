@@ -46,15 +46,13 @@ text.addEventListener('click', function() {
 
     videoContainer.style.display = 'flex'; // Show video container
     videoContainer.style.flexDirection = 'column';
-    videoContainer.style.opacity = '1'; // Fade in video
+    // videoContainer.style.opacity = '1'; // Fade in video
 
     setTimeout(() => {
         video.style.opacity = '1'
         video.src = videoSource; // Start the video
         video.play();
-    }, 1000);
 
-    setTimeout(() => {
         closeButton.style.opacity = '1';
     }, 1000);
 
@@ -80,36 +78,58 @@ closeButton.addEventListener('click', function() {
     }, 1000); // Wait for the fade out transition to finish
 });
 
+// creditsBtn.addEventListener('click', function() {
+//     text.style.opacity = '0';
+//     creditsBtn.style.opacity = '0';
+
+//     setTimeout(() => {
+//         text.classList.add('hidden');
+//         creditsBtn.classList.add('hidden');
+//     }, 1000);
+
+//     // loadingContainer.style.display = 'flex';
+//     credits.style.display = 'none';
+
+//     credits.style.opacity = '0';
+//     credits.src = creditSource;
+
+//     creditsContainer.style.display = 'flex';
+//     creditsContainer.style.opacity = '1';
+
+//     // credits.onload = function() {
+//     //     loadingContainer.style.display = 'none';
+//     //     credits.style.display = 'flex';
+
+        
+//     // };
+
+//     setTimeout(() => {
+//         credits.style.opacity = '1';
+//     }, 1000);
+
+//     setTimeout(() => {
+//         closeCredits.style.opacity = '1';
+//     }, 1000);
+// });
+
 creditsBtn.addEventListener('click', function() {
-    text.style.opacity = '0';
     creditsBtn.style.opacity = '0';
-
-    loadingContainer.style.display = 'flex';
-    credits.style.display = 'none';
-
-    credits.style.opacity = '0';
-    credits.src = creditSource;
-
-    creditsContainer.style.display = 'flex';
-    creditsContainer.style.opacity = '1';
-
-    credits.onload = function() {
-        loadingContainer.style.display = 'none';
-        credits.style.display = 'flex';
-
-        setTimeout(() => {
-            credits.style.opacity = '1';
-        }, 1000);
-    };
-
-    setTimeout(() => {
-        closeCredits.style.opacity = '1';
-    }, 1000);
+    text.style.opacity = '0';
 
     setTimeout(() => {
         text.classList.add('hidden');
         creditsBtn.classList.add('hidden');
-    });
+
+        creditsContainer.style.display = 'flex';
+
+        credits.src = creditSource;
+
+        setTimeout(() => {
+            credits.style.opacity = '1';
+            closeCredits.style.opacity = '1';
+        }, 100);
+        
+    }, 1000);
 });
 
 closeCredits.addEventListener('click', function() {

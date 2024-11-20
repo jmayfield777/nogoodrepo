@@ -49,6 +49,8 @@ body, html {
   padding: 0;
   cursor: pointer;
   font-size: 15px;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
 #closeButton:hover {
@@ -58,6 +60,7 @@ body, html {
 h1 {
   text-decoration: none;
   margin-bottom: 20px;
+  transition: opacity 1s ease;
 }
 
 .center-container {
@@ -85,6 +88,7 @@ h1 {
   color: white;
   background: none;
   border: none;
+  transition: opacity 1s ease;
 }
 
 #creditsBtn:hover {
@@ -107,7 +111,7 @@ h1 {
   /* width: 640px;
   height: 360px;
   opacity: 0;
-  transition: opacity 1s ease; */
+  transition: opacity 1s ease;
   max-width: 80%; /* Adjust the max width to make it larger */
   max-height: 80%; /* Adjust the max height to fit the viewport */
   height: auto; /* Maintain aspect ratio */
@@ -127,13 +131,15 @@ h1 {
   padding: 0;
   cursor: pointer;
   font-size: 15px;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
 #closeCreditsButton:hover {
   color: lightgray;
 }
 
-#loadingContainer {
+/* #loadingContainer {
   display: none;
   position: fixed;
   top: 0;
@@ -146,11 +152,11 @@ h1 {
 }
 
 #loadingContainer img {
-  max-width: 80%; /* Adjust the max width to make it larger */
-  max-height: 80%; /* Adjust the max height to fit the viewport */
-  height: auto; /* Maintain aspect ratio */
-  width: auto; /* Maintain aspect ratio */
-  margin: 20px 0; /* Add some margin for spacing */
+  max-width: 80%; 
+  max-height: 80%; 
+  height: auto; 
+  width: auto; 
+  margin: 20px 0; 
   opacity: 0;
   transition: opacity 1s ease;
-}
+} */
