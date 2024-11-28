@@ -14,11 +14,30 @@ body, html {
   background-color: #000;
 }
 
-.clickable-text {
+/* .clickable-text {
   color: white;
   cursor: pointer;
   font-size: 40px;
   transition: opacity 1s ease;
+} */
+
+.clickable-image {
+  max-height: 80%;
+  height: auto;
+  width: auto;
+  cursor: pointer;
+  transition: opacity 1s ease;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 #videoContainer {
@@ -57,18 +76,18 @@ body, html {
   color: lightgray;
 }
 
-h1 {
+/* h1 {
   text-decoration: none;
   margin-bottom: 20px;
   transition: opacity 1s ease;
-}
+} */
 
-.center-container {
+/* .center-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
+} */
 
 .hidden {
   opacity: 0;
