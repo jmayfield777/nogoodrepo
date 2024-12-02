@@ -14,15 +14,8 @@ body, html {
   background-color: #000;
 }
 
-/* .clickable-text {
-  color: white;
-  cursor: pointer;
-  font-size: 40px;
-  transition: opacity 1s ease;
-} */
-
 .clickable-image {
-  max-height: 80%;
+  max-height: 30%;
   height: auto;
   width: auto;
   cursor: pointer;
