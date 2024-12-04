@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Consolas Bold';
+  src: url('Consolas-Bold.eot');
+  src: url('Consolas-Bold.eot?iefix') format('embedded-opentype'),
+       url('Consolas-Bold.woff') format('woff'),
+       url('Consolas-Bold.ttf') format('truetype'),
+       url('Consolas-Bold.svg#ConsolasBold') format('svg');
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -8,6 +17,7 @@
   --background-color: #000000;
   --hover-color: #808080;
   --text-color: #ffffff;
+  --main-font: 'Consolas Bold'
 }
 
 body, html {
@@ -67,6 +77,7 @@ body, html {
   padding: 0;
   cursor: pointer;
   font-size: 15px;
+  font-family: var(--main-font);
   opacity: 0;
   transition: opacity 1s ease;
 }
@@ -89,6 +100,7 @@ body, html {
   right: 20px;
   padding: 0;
   font-size: 15px;
+  font-family: var(--main-font);
   cursor: pointer;
   color: white;
   background: none;
@@ -131,6 +143,7 @@ body, html {
   padding: 0;
   cursor: pointer;
   font-size: 15px;
+  font-family: var(--main-font);
   opacity: 0;
   transition: opacity 1s ease;
 }
@@ -149,6 +162,7 @@ body, html {
   left: 20px;
   padding: 0;
   font-size: 15px;
+  font-family: var(--main-font);
   cursor: pointer;
   color: var(--text-color);
   background: none;
@@ -182,6 +196,7 @@ body, html {
   padding: 0;
   cursor: pointer;
   font-size: 15px;
+  font-family: var(--main-font);
   opacity: 0;
   transition: opacity 1s ease;
 }
@@ -224,6 +239,8 @@ body, html {
 }
 
 #email {
+  font-size: 15px;
+  font-family: var(--main-font);
   justify-content: center;
   align-items: center;
   color: var(--text-color);
