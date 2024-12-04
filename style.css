@@ -147,6 +147,7 @@ body, html {
   color: white;
   background: none;
   border: none;
+  transition: opacity 1s ease;
 }
 
 #infoButton:hover {
