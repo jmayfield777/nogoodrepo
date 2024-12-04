@@ -20,6 +20,7 @@ const laurelSourcTwo = './image1.png';
 image.addEventListener('click', function() {
     image.style.opacity = '0';
     creditsBtn.style.opacity = '0';
+    infoBtn.style.opacity = '0';
 
     videoContainer.style.display = 'flex';
     videoContainer.style.flexDirection = 'column';
@@ -35,6 +36,7 @@ image.addEventListener('click', function() {
     setTimeout(() => {
         image.classList.add('hidden');
         creditsBtn.classList.add('hidden');
+        infoBtn.classList.add('hidden');
     }, 1000);
 });
 
@@ -48,19 +50,23 @@ closeButton.addEventListener('click', function() {
 
         image.style.opacity = '1';
         creditsBtn.style.opacity = '1';
+        infoBtn.style.opacity = '1';
 
         image.classList.remove('hidden');
         creditsBtn.classList.remove('hidden');
+        infoBtn.classList.remove('hidden');
     }, 1000);
 });
 
 creditsBtn.addEventListener('click', function() {
     creditsBtn.style.opacity = '0';
     image.style.opacity = '0';
+    infoBtn.style.opacity = '0';
 
     setTimeout(() => {
         image.classList.add('hidden');
         creditsBtn.classList.add('hidden');
+        infoBtn.classList.add('hidden');
 
         creditsContainer.style.display = 'flex';
 
@@ -83,19 +89,23 @@ closeCredits.addEventListener('click', function() {
 
         image.classList.remove('hidden');
         creditsBtn.classList.remove('hidden');
+        infoBtn.classList.remove('hidden');
 
         image.style.opacity = '1';
         creditsBtn.style.opacity = '1';
+        infoBtn.style.opacity = '1';
     }, 1000);
 });
 
 infoBtn.addEventListener('click', function() {
     infoBtn.style.opacity = '0';
     image.style.opacity = '0';
+    creditsBtn.style.opacity = '0';
 
     setTimeout(() => {
         image.classList.add('hidden');
         infoBtn.classList.add('hidden');
+        creditsBtn.classList.add('hidden');
 
         infoContainer.style.display = 'flex';
 
@@ -107,6 +117,23 @@ infoBtn.addEventListener('click', function() {
             laurelTwo.style.opacity = '1';
             closeInfo.style.opacity = '1';
         }, 100);
+    }, 1000);
+});
+
+closeInfo.addEventListener('click', function() {
+    laurelOne.style.opacity = '0';
+    laurelTwo.style.opacity = '0';
+    closeInfo.style.opacity = '0';
+
+    setTimeout(() => {
+        infoContainer.style.display = 'none';
+        image.classList.remove('hidden');
+        creditsBtn.classList.remove('hidden');
+        infoBtn.classList.remove('hidden');
+
+        image.style.opacity = '1';
+        creditsBtn.style.opacity = '1';
+        infoBtn.style.opacity = '1';
     }, 1000);
 });
 
