@@ -4,6 +4,12 @@
   margin: 0;
 }
 
+:root {
+  --background-color: #000000;
+  --hover-color: #808080;
+  --text-color: #ffffff;
+}
+
 body, html {
   height: 100%;
   margin: 0;
@@ -11,7 +17,7 @@ body, html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #000;
+  background-color: var(--background-color);
 }
 
 .clickable-image {
@@ -55,7 +61,7 @@ body, html {
   position: absolute;
   top: 20px;
   right: 20px;
-  color: white;
+  color: var(--text-color);
   background: none;
   border: none;
   padding: 0;
@@ -66,7 +72,7 @@ body, html {
 }
 
 #closeButton:hover {
-  color: lightgray;
+  color: var(--hover-color);
 }
 
 .hidden {
@@ -91,7 +97,7 @@ body, html {
 }
 
 #creditsBtn:hover {
-  color: lightgray;
+  color: var(--hover-color);
 }
 
 #creditsContainer {
@@ -103,7 +109,7 @@ body, html {
   bottom: 0;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-color: var(--background-color);
 }
 
 #creditsImg {
@@ -119,7 +125,7 @@ body, html {
   position: absolute;
   top: 20px;
   right: 20px;
-  color: white;
+  color: var(--text-color);
   background: none;
   border: none;
   padding: 0;
@@ -130,7 +136,7 @@ body, html {
 }
 
 #closeCreditsButton:hover {
-  color: lightgray;
+  color: var(--hover-color);
 }
 
 .info-button-container {
@@ -144,14 +150,14 @@ body, html {
   padding: 0;
   font-size: 15px;
   cursor: pointer;
-  color: white;
+  color: var(--text-color);
   background: none;
   border: none;
   transition: opacity 1s ease;
 }
 
 #infoButton:hover {
-  color: lightgray;
+  color: var(--hover-color);
 }
 
 #infoContainer {
@@ -163,14 +169,14 @@ body, html {
   bottom: 0;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-color: var(--background-color);
 }
 
 #closeInfoButton {
   position: absolute;
   top: 20px;
   right: 20px;
-  color: white;
+  color: var(--text-color);
   background: none;
   border: none;
   padding: 0;
@@ -181,11 +187,11 @@ body, html {
 }
 
 #closeInfoButton:hover {
-  color: lightgray;
+  color: var(--hover-color);
 }
 
 #laurelImageOne {
-  max-height: 80%;
+  max-height: 50%;
   height: auto;
   width: auto;
   margin: 20px 0;
@@ -196,12 +202,31 @@ body, html {
 }
 
 #laurelImageTwo {
-  max-height: 30%;
+  max-height: 20%;
   height: auto;
   width: auto;
   margin: 20px 0;
   opacity: 0;
   justify-content: center;
   align-items: center;
+  transition: opacity 1s ease;
+}
+
+#emailContainer {
+  display: none;
+  position: fixed;
+  top: calc(50% + 180px);
+  left: 50%;
+  transform: translate(-50%);
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+}
+
+#email {
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  opacity: 0;
   transition: opacity 1s ease;
 }

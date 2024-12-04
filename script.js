@@ -14,6 +14,8 @@ const infoContainer = document.getElementById('infoContainer');
 const laurelOne = document.getElementById('laurelImageOne');
 const laurelTwo = document.getElementById('laurelImageTwo');
 const closeInfo = document.getElementById('closeInfoButton');
+const email = document.getElementById('email');
+const emailContainer = document.getElementById('emailContainer');
 const laurelSourcOne = './image0.png';
 const laurelSourcTwo = './image1.png';
 
@@ -108,6 +110,8 @@ infoBtn.addEventListener('click', function() {
         creditsBtn.classList.add('hidden');
 
         infoContainer.style.display = 'flex';
+        emailContainer.style.display = 'flex';
+        
 
         laurelOne.src = laurelSourcOne;
         laurelTwo.src = laurelSourcTwo;
@@ -115,6 +119,7 @@ infoBtn.addEventListener('click', function() {
         setTimeout(() => {
             laurelOne.style.opacity = '1';
             laurelTwo.style.opacity = '1';
+            email.style.opacity = '1';
             closeInfo.style.opacity = '1';
         }, 100);
     }, 1000);
@@ -123,6 +128,8 @@ infoBtn.addEventListener('click', function() {
 closeInfo.addEventListener('click', function() {
     laurelOne.style.opacity = '0';
     laurelTwo.style.opacity = '0';
+    email.style.opacity = '0';
+    
     closeInfo.style.opacity = '0';
 
     setTimeout(() => {
