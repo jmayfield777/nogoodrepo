@@ -153,3 +153,55 @@ body, html {
 #infoButton:hover {
   color: lightgray;
 }
+
+#infoContainer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+#closeInfoButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 15px;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+#closeInfoButton:hover {
+  color: lightgray;
+}
+
+#laurelImageOne {
+  max-height: 80%;
+  height: auto;
+  width: auto;
+  margin: 20px 0;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease;
+}
+
+#laurelImageTwo {
+  max-height: 35%;
+  height: auto;
+  width: auto;
+  margin: 20px 0;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease;
+}

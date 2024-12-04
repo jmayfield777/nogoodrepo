@@ -9,6 +9,13 @@ const credits = document.getElementById('creditsImg');
 const creditSource = './Credits stills_5.1.1.webp';
 const closeCredits = document.getElementById('closeCreditsButton');
 const playPausebutton = document.getElementById('playPauseButton');
+const infoBtn = document.getElementById('infoButton');
+const infoContainer = document.getElementById('infoContainer');
+const laurelOne = document.getElementById('laurelImageOne');
+const laurelTwo = document.getElementById('laurelImageTwo');
+const closeInfo = document.getElementById('closeInfoButton');
+const laurelSourcOne = './image0.png';
+const laurelSourcTwo = './image1.png';
 
 image.addEventListener('click', function() {
     image.style.opacity = '0';
@@ -79,6 +86,27 @@ closeCredits.addEventListener('click', function() {
 
         image.style.opacity = '1';
         creditsBtn.style.opacity = '1';
+    }, 1000);
+});
+
+infoBtn.addEventListener('click', function() {
+    infoBtn.style.opacity = '0';
+    image.style.opacity = '0';
+
+    setTimeout(() => {
+        image.classList.add('hidden');
+        infoBtn.classList.add('hidden');
+
+        infoContainer.style.display = 'flex';
+
+        laurelOne.src = laurelSourcOne;
+        laurelTwo.src = laurelSourcTwo;
+
+        setTimeout(() => {
+            laurelOne.style.opacity = '1';
+            laurelTwo.style.opacity = '1';
+            closeInfo.style.opacity = '1';
+        }, 100);
     }, 1000);
 });
 
