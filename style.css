@@ -247,3 +247,49 @@ body, html {
   opacity: 0;
   transition: opacity 1s ease;
 }
+
+@media (max-width: 768px) {
+  .image-container {
+    flex-direction: column;
+  }
+
+  #laurelImageOne {
+    max-height: 30%;
+  }
+
+  #laurelImageTwo {
+    max-height: 15%;
+  }
+
+  #creditsImg {
+    max-height: 30%;
+  }
+
+  #video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container {
+    flex-direction: column;
+  }
+
+  #laurelImageOne {
+    max-height: 25%;
+  }
+
+  #laurelImageTwo {
+    max-height: 10%;
+  }
+
+  #creditsImg {
+    max-height: 50%;
+  }
+
+  #video {
+    width: 100%;
+    height: auto;
+  }
+}
